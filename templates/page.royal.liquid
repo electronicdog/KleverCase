@@ -1,0 +1,38 @@
+<div class="grid">
+
+  <div class="grid-item large--two-thirds push--large--one-sixth">
+
+    <div class="page-header pad_push_top">
+      <h2 class="info">{{ page.title }}</h2>
+    </div>
+
+    {% comment %}
+      Regular page content goes here.
+    {% endcomment %}
+    <div class="rte">
+<!--       {{ page.content }} -->
+		<a class="#" href="index.html">Hello.</a>	
+		
+		<section>
+			<p>Overlay fades in and menu rotates slightly in perspective. As seen on <a href="http://hugeinc.com">Huge</a></p>
+			<p><button id="trigger-overlay" type="button">Open Overlay</button></p>
+		</section>
+		
+		<!-- open/close -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>	
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,87 @@
+{% assign MagicToolboxSirvID = '' %}
+{% assign MagicToolboxSirvSpinsPath = 'products/{product-id}/{product-id}.spin' %}
+{% assign MagicToolboxShowMessage = 'No' %}
+{% assign MagicToolboxMessage = '' %}
+{% assign MagicToolboxBigImageSize = 'master' %}
+{% assign MagicToolboxThumbnailImageSize = '1024x1024' %}
+{% assign MagicToolboxSelectorImageSize = 'small' %}
+{% assign MagicToolboxUseCustomWidth = 'No' %}
+{% assign MagicToolboxThumbnailImageWidth = '480' %}
+{% if MagicToolboxUseCustomWidth == 'Yes' %}
+<style type="text/css">.MagicZoomPlus > img { max-width: {{ MagicToolboxThumbnailImageWidth }}px !important; }</style>
+{% endif %}
+<div class="MagicToolboxContainer product-photo-container">
+	<div class="product-photo-container">
+    	<a href="{{ product.images[0] | product_img_url: MagicToolboxBigImageSize }}" class="MagicZoomPlus" id="zoom{{ product.id }}" title="{{ product.images[0].alt | escape }}"><img itemprop="image" src="{{ product.images[0] | product_img_url: MagicToolboxThumbnailImageSize }}" alt="{{ product.images[0].alt | escape }}" /></a>
+		{% if MagicToolboxShowMessage == 'Yes' %}
+    		<div class="MagicToolboxMessage">{{ MagicToolboxMessage }}</div>
+		{% endif %}
+    
+		{% if product.images.size > 1 %}
+	</div>
+	    <div class="grid-item large--one-half">
+	  	  <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
+		
+        {% for image in product.images %}
+            <li class="grid-item one-third pull_pad_left">
+        	  <a href="{{ image | product_img_url: MagicToolboxBigImageSize }}" rel="zoom-id:zoom{{ product.id }}" rev="{{ image | product_img_url: MagicToolboxThumbnailImageSize }}" title="{{ image.alt | escape }}"><img src="{{ image | product_img_url: MagicToolboxSelectorImageSize }}" alt="{{ image.alt | escape }}" /></a>
+            </li>
+        {% endfor %}
+      
+	  	  </ul>
+        </div>
+      
+        {% endif %}
+  
+		<div class="grid-item large--one-half trial">
+			{% if collection.handle == 'ereader-tablet' %}
+				<a class="fit" href="{{ settings.vid_link_howto }}" target="_blank">
+					&nbsp;<img class="minhigh" src="{{ 'HowToFit.jpg' | asset_url }}" nopin="nopin" />
+				</a>
+			{% else %}
+<!--
+				{% if collection.handle == 'mobile' %}
+				<a class="story" href="{{ settings.vid_link_phone }}" target="_blank">
+					&nbsp;<img class="minhigh" src="{{ 'PhoneFit.jpg' | asset_url }}" nopin="nopin" />
+				</a>
+				{% else %}
+-->
+				<a class="fit" href="{{ settings.vid_link_howto }}" target="_blank">
+					&nbsp;<img class="minhigh" src="{{ 'HowToFit.jpg' | asset_url }}" nopin="nopin" />
+				</a>
+<!-- 				{% endif %} -->
+			{% endif %}
+		</div>
+  
+</div>
+
+<script>
+var SirvID = '{{ MagicToolboxSirvID }}';
+var SirvSpinsPath = '{{ MagicToolboxSirvSpinsPath }}';
+var SirvProductID = {{ product.id }};
+var SirvIconURL = '{{ 'SirvIcon.png' | asset_url }}';
+
+jQuery(function() {  
+	var funcName = document.body.innerHTML.replace(/(\r\n|\n|\r)/gm,"").replace(/.*onVariantSelected *: *(.*?),.*/igm,'$1')
+    
+    if ( funcName!='') {
+
+    	window[funcName+'_old'] = window[funcName];
+  		window[funcName] = function(){
+    
+    		var largeImage = arguments[0].featured_image.src;
+			var isize = Shopify.Image.imageSize(jQuery('a.MagicZoomPlus img').first().attr('src'));
+    		var smallImage = Shopify.Image.getSizedImageUrl(arguments[0].featured_image.src, isize); 
+
+    		if (jQuery('.MagicZoomPup').length==0) {
+    			jQuery('a.MagicZoomPlus').attr('href',largeImage)
+        		jQuery('a.MagicZoomPlus img').first().attr('src',mediumImage);
+    		} else {
+  				MagicZoomPlus.update(jQuery('a.MagicZoomPlus').attr('id'),largeImage,smallImage);
+    		}
+    		window[funcName+'_old'](arguments[0],arguments[1],arguments[2])
+  		}
+    }
+});  
+
+</script>

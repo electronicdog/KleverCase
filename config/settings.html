@@ -1,0 +1,1105 @@
+<!--
+  If you're using our theme_gem to upload your files, make sure you close your
+  input and br tags as if it were XHTML.
+    - eg. <br /> and <input type="text" />
+
+    More info on settings:
+      - http://docs.shopify.com/themes/theme-templates/settings
+-->
+<table>
+  <tr>
+    <td><p>Theme settings allow designers to provide an easy way for any user to customize the look and feel of their shop without having to delve into HTML or CSS code. Please see our <a title="Open documentation in a new window" target="_blank" href="http://docs.shopify.com/themes/theme-templates/settings">help page on theme settings</a> to learn more about how you can make your theme customizable.</p></td>
+  </tr>
+</table>
+<fieldset>
+  <legend>LOGO</legend>
+  <table>
+    <tr>
+      <td><label for="use_logo">Use Custom Logo?</label></td>
+      <td><input type="checkbox" id="use_logo" name="use_logo" /></td>
+    </tr>
+    <tr>
+      <td><label for="logo_image">Custom Logo</label></td>
+      <td><input type="file" name="logo.png" id="logo_image" data-max-width="500" data-max-height="200" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><small>Maximum logo dimensions are 500px wide by 200px high.<br />Your uploaded file will be resized to fit within those constraints.</small></td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>SLIDER</legend>
+  <table>
+  	
+  	<tr>
+      <td><label for="static_head">Static Header Image</label></td>
+      <td><input type="file" name="static_head.jpg" id="static_head" data-max-width="1280" data-max-height="550" /></td>
+    </tr>
+  	
+  	<tr>
+      <td><label for="use_slider">Use Slider?</label></td>
+      <td><input type="checkbox" id="use_slider" name="use_slider" /></td>
+    </tr>
+  	
+  	<tr>
+      <td colspan="2"><small>Optimum slide dimensions are 1280px wide by 550px high.<br />Your uploaded file will be resized to fit within those constraints.</small></td>
+    </tr>
+  
+    <tr>
+      <td><label for="logo_image">SLIDE ONE</label></td>
+      <td><input type="file" name="slide1.png" id="slide_image" data-max-width="1280" data-max-height="550" /></td>
+      <td>Link URL: <input type="url" name="slide_link_one" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="logo_image">SLIDE TWO</label></td>
+      <td><input type="file" name="slide2.png" id="slide_image" data-max-width="1280" data-max-height="550" /></td>
+      <td>Link URL: <input type="url" name="slide_link_two" /></td>
+    </tr>
+	
+    <tr>
+      <td><label for="logo_image">SLIDE THREE</label></td>
+      <td><input type="file" name="slide3.png" id="slide_image" data-max-width="1280" data-max-height="550" /></td>
+      <td>Link URL: <input type="url" name="slide_link_three" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="logo_image">SLIDE FOUR</label></td>
+      <td><input type="file" name="slide4.png" id="slide_image" data-max-width="1280" data-max-height="550" /></td>
+      <td>Link URL: <input type="url" name="slide_link_four" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="logo_image">SLIDE FIVE</label></td>
+      <td><input type="file" name="slide5.png" id="slide_image" data-max-width="1280" data-max-height="550" /></td>
+      <td>Link URL: <input type="url" name="slide_link_five" /></td>
+    </tr>
+    
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>HOMPAGE</legend>
+  <table>
+	  <tr>
+		  <td><label for="intro_title">Intro Title</label></td>
+		  <td><textarea name="intro_title" cols="60" rows="5" id="intro_title" value="" /></td>
+	  </tr>
+	  <tr>
+		  <td><label for="intro_text">Intro Text</label></td>
+		  <td><textarea name="intro_text" cols="60" rows="5" id="intro_text" value="" /></td>
+	  </tr>
+  </table>
+  <hr/>
+  <table>
+    <tr>
+      <td><label for="grid_box_one">Grid 1 Image</label></td>
+      <td><input type="file" name="Grid1.jpg" id="grid_box_one" data-max-width="600" data-max-height="908" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_one">Grid 1 Title</label></td>
+      <td><input type="text" name="grid_title_one" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_one">Grid 1 Text</label></td>
+      <td><textarea name="grid_text_one" cols="60" rows="5" id="grid_text_one" value="" /></td>
+    </tr>
+    
+    <tr>
+    	<th>
+        	<label for="my_radio">Grid 1 Text Align</label>
+    	</th>
+          
+    	<td>
+        <input type="radio" name="grid_align_1" value="left" /> Left
+        <input type="radio" name="grid_align_1" value="right" /> Right
+    	</td>
+    </tr>
+    
+    <tr>
+	    <th>
+	        <label for="grid1_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="collection" name="grid1_collection" />
+	    </td>
+	</tr>
+	
+	<tr>
+		<th>
+			<label for="colorOne">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorOne">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    <tr>
+      <td><label for="grid_box_two">Grid 2 Image</label></td>
+      <td><input type="file" name="Grid2.jpg" id="grid_box_two" data-max-width="600" data-max-height="446" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_two">Grid 2 Title</label></td>
+      <td><input type="text" name="grid_title_two" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_two">Grid 2 Text</label></td>
+      <td><textarea name="grid_text_two" cols="60" rows="5" id="grid_text_two" value="" /></td>
+    </tr>
+    <th>
+        <label for="my_radio">Grid 2 Text Align</label>
+    </th>      
+    <td>
+        <input type="radio" name="grid_align_2" value="left" /> Left
+        <input type="radio" name="grid_align_2" value="right" /> Right
+    </td>
+    <tr>
+	    <th>
+	        <label for="my_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="collection" name="grid2_collection" />
+	    </td>
+	</tr>
+	<tr>
+		<th>
+			<label for="colorTwo">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorTwo">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    
+    <tr>
+      <td><label for="grid_box_three">Grid 3 Image</label></td>
+      <td><input type="file" name="Grid3.jpg" id="grid_box_three" data-max-width="600" data-max-height="446" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_three">Grid 3 Title</label></td>
+      <td><input type="text" name="grid_title_three" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_three">Grid 3 Text</label></td>
+      <td><textarea name="grid_text_three" cols="60" rows="5" id="grid_text_three" value="" /></td>
+    </tr>
+    <th>
+        <label for="my_radio">Grid 3 Text Align</label>
+    </th>      
+    <td>
+        <input type="radio" name="grid_align_3" value="left" /> Left
+        <input type="radio" name="grid_align_3" value="right" /> Right
+    </td>
+    <tr>
+	    <th>
+	        <label for="my_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="collection" name="grid3_collection" />
+	    </td>
+	</tr>
+	
+	<tr>
+		<th>
+			<label for="colorThree">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorThree">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    
+    <tr>
+      <td><label for="grid_box_promo">Grid Promo Image</label></td>
+      <td><input type="file" name="GridPromo.jpg" id="grid_box_promo" data-max-width="1224" data-max-height="225" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_promo">Grid Promo Title</label></td>
+      <td><input type="text" name="grid_title_promo" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_promo">Grid Promo Text</label></td>
+      <td><textarea name="grid_text_promo" cols="60" rows="5" id="grid_text_promo" value="" /></td>
+    </tr>
+    <th>
+        <label for="my_radio">Promo Text Align</label>
+    </th>      
+    <td>
+        <input type="radio" name="grid_align_promo" value="left" /> Left
+        <input type="radio" name="grid_align_promo" value="right" /> Right
+    </td>
+    <tr>
+	    <th>
+	        <label for="promo_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="page" name="promo_collection" />
+	    </td>
+	</tr>
+	
+	<tr>
+		<th>
+			<label for="colorPromo">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorPromo">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    
+    <tr>
+      <td><label for="grid_box_video">Grid Video Image</label></td>
+      <td><input type="file" name="GridVideo.jpg" id="grid_box_promo" data-max-width="600" data-max-height="446" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="grid_title_video">Grid Video Title</label></td>
+      <td><input type="text" name="grid_title_video" value="" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="grid_text_video">Grid Video Text</label></td>
+      <td><textarea name="grid_text_video" cols="60" rows="5" id="grid_text_video" value="" /></td>
+    </tr>
+    
+    <tr>
+	    <th>
+	        <label for="my_radio">Video Text Align</label>
+	    </th>      
+	    <td>
+	        <input type="radio" name="grid_align_video" value="left" /> Left
+	        <input type="radio" name="grid_align_video" value="right" /> Right
+	    </td>
+    </tr>
+    
+    <tr>
+	    <td><label for="video_link">Grid Video Link</label></td>
+	    <td>
+        	<select class="page" name="video_link" />
+    	</td>
+    </tr>
+    
+    <tr>
+		<th>
+			<label for="colorVideo">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorVideo">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    
+    <tr>
+      <td><label for="grid_box_four">Grid 4 Image</label></td>
+      <td><input type="file" name="Grid4.jpg" id="grid_box_four" data-max-width="600" data-max-height="446" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_four">Grid 4 Title</label></td>
+      <td><input type="text" name="grid_title_four" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_four">Grid 4 Text</label></td>
+      <td><textarea name="grid_text_four" cols="60" rows="5" id="grid_text_four" value="" /></td>
+    </tr>
+    <th>
+        <label for="my_radio">Grid 4 Text Align</label>
+    </th>      
+    <td>
+        <input type="radio" name="grid_align_4" value="left" /> Left
+        <input type="radio" name="grid_align_4" value="right" /> Right
+    </td>
+    <tr>
+	    <th>
+	        <label for="my_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="collection" name="grid4_collection" />
+	    </td>
+	</tr>
+	
+	<tr>
+		<th>
+			<label for="colorFour">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorFour">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+    
+  </table>
+  <hr/>
+  <table>
+    
+    <tr>
+      <td><label for="grid_box_five">Grid 5 Image</label></td>
+      <td><input type="file" name="Grid5.jpg" id="grid_box_five" data-max-width="600" data-max-height="908" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_title_five">Grid 5 Title</label></td>
+      <td><input type="text" name="grid_title_five" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="grid_text_five">Grid 5 Text</label></td>
+      <td><textarea name="grid_text_five" cols="60" rows="5" id="grid_text_five" value="" /></td>
+    </tr>
+    <th>
+        <label for="grid_align_5">Grid 5 Text Align</label>
+    </th>      
+    <td>
+        <input type="radio" name="grid_align_5" value="left" /> Left
+        <input type="radio" name="grid_align_5" value="right" /> Right
+    </td>
+    <tr>
+	    <th>
+	        <label for="grid5_collection">Link to Collection</label>
+	    </th>
+	    <td>
+	        <select class="collection" name="grid5_collection" />
+	    </td>
+	</tr>
+	
+	<tr>
+		<th>
+			<label for="colorFive">Text Colour</label>
+		</th>
+		<td>
+			<select name="colorFive">
+				<option value="#515151" selected="selected">Dark Grey</option>
+				<option value="#666666">Mid Grey</option>
+				<option value="#c2502d">Orange</option>
+				<option value="#f5f4ef">Off White</option>
+    		</select>
+  		</td>
+	</tr>
+	
+  </table>
+  <hr/>
+  <table>
+	
+	<tr>
+      <td><label for="base_grid_one">Base 1 Image</label></td>
+      <td><input type="file" name="Base1.jpg" id="base_grid_one" data-max-width="350" data-max-height="233" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_title_one">Base 1 Title</label></td>
+      <td><input type="text" name="base_title_one" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_text_one">Base 1 Text</label></td>
+      <td><textarea name="base_text_one" cols="60" rows="5" id="base_text_one" value="" /></td>
+    </tr>      
+    
+    <tr>
+	    <th>
+	        <label for="baselink_1">Link to Post</label>
+	    </th>
+	    <td>
+	        <input type="url" name="baselink_1" />
+	    </td>
+	</tr>
+	
+  </table>
+  <hr/>
+  <table>
+	
+	<tr>
+      <td><label for="base_grid_two">Base 2 Image</label></td>
+      <td><input type="file" name="Base2.jpg" id="base_grid_two" data-max-width="350" data-max-height="233" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_title_two">Base 2 Title</label></td>
+      <td><input type="text" name="base_title_two" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_text_two">Base 2 Text</label></td>
+      <td><textarea name="base_text_two" cols="60" rows="5" id="base_text_two" value="" /></td>
+    </tr>     
+    
+    <tr>
+	    <th>
+	        <label for="baselink_2">Link to Post</label>
+	    </th>
+	    <td>
+	        <input type="url" name="baselink_2" />
+	    </td>
+	</tr>
+
+  </table>
+  <hr/>
+  <table>
+	  
+	<tr>
+      <td><label for="base_grid_three">Base 3 Image</label></td>
+      <td><input type="file" name="Base3.jpg" id="base_grid_three" data-max-width="350" data-max-height="233" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_title_three">Base 3 Title</label></td>
+      <td><input type="text" name="base_title_three" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="base_text_three">Base 3 Text</label></td>
+      <td><textarea name="base_text_three" cols="60" rows="5" id="base_text_three" value="" /></td>
+    </tr>
+    <tr>
+	    <th>
+	        <label for="baselink_3">Link/URL to Blog Post or Page</label>
+	    </th>
+	    <td>
+	        <input type="url" name="baselink_3" />
+	    </td>
+	</tr>
+
+	    
+  </table>
+</fieldset>
+
+<fieldset>
+	<legend>VIDEOS</legend>
+	<table>
+		<tr>
+			<td><label for="videoOne_Title">Video Title</label></td>
+			<td><input type="text" name="videoOne_Title" value="" /></td>
+    	</tr>
+    	
+    	<tr>
+			<td><label for="videoOne">Video Embed Code</label></td>
+			<td><input type="text" name="videoOne" value="" /></td>
+    	</tr>
+	</table>
+	<hr/>
+	<table>	
+    	<tr>
+			<td><label for="videoTwo_Title">Video Title</label></td>
+			<td><input type="text" name="videoTwo_Title" value="" /></td>
+    	</tr>
+    	
+    	<tr>
+			<td><label for="videoTwo">Video Embed Code</label></td>
+			<td><input type="text" name="videoTwo" value="" /></td>
+    	</tr>
+    </table>
+	<hr/>
+	<table>
+    	<tr>
+			<td><label for="videoThree_Title">Video Title</label></td>
+			<td><input type="text" name="videoThree_Title" value="" /></td>
+    	</tr>
+    	
+    	<tr>
+			<td><label for="videoThree">Video Embed Code</label></td>
+			<td><input type="text" name="videoThree" value="" /></td>
+    	</tr>
+    </table>
+	<hr/>
+	<table>
+    	<tr>
+			<td><label for="videoFour_Title">Video Title</label></td>
+			<td><input type="text" name="videoFour_Title" value="" /></td>
+    	</tr>
+    	
+    	<tr>
+			<td><label for="videoFour">Video Embed Code</label></td>
+			<td><input type="text" name="videoFour" value="" /></td>
+    	</tr>
+    </table>
+	<hr/>
+	<table>
+    	<tr>
+			<td><label for="videoFive_Title">Video Title</label></td>
+			<td><input type="text" name="videoFive_Title" value="" /></td>
+    	</tr>
+    	
+    	<tr>
+			<td><label for="videoFive">Video Embed Code</label></td>
+			<td><input type="text" name="videoFive" value="" /></td>
+    	</tr>
+
+	</table>
+</fieldset>
+
+<fieldset>
+  <legend>SOCIAL</legend>
+  <table>
+    <tr>
+      <td colspan="2"><small>Social helpers include Facebook Open Graph Tags and Twitter Cards. Enable or disable them here, all of the code is taking care of for you in snippets.</small></td>
+    </tr>
+    <tr>
+      <td><label for="enable_opengraph">Enable <a href="https://developers.facebook.com/docs/opengraph/using-objects/" title="About Facebook Open Graph Objects">Facebook Open Graph Tags</a></label></td>
+      <td><input type="checkbox" id="enable_opengraph" name="enable_opengraph" /></td>
+    </tr>
+    <tr>
+      <td><label for="enable_twittercards">Enable <a href="https://dev.twitter.com/docs/cards/types/product-card" title="About Twitter Product Cards">Twitter Cards</a></label></td>
+      <td><input type="checkbox" id="enable_twittercards" name="enable_twittercards" /></td>
+    </tr>
+    <tr>
+      <th><label for="twittercard_handle">Your site's Twitter Handle</label></th>
+      <td>
+        <input type="text" id="twittercard_handle" name="twittercard_handle" value="" /><br />
+        <small>E.g. @Shopify. Required if Twitter Cards are enabled.</small>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- HEADER -->
+
+<fieldset>
+  <legend>HEADER</legend>
+  <table>
+    <tr>
+      <th><label for="header_link_first">Footer about title</label></th>
+      <td colspan="2"><input type="text" id="footer_contact_title" name="footer_contact_title" value="" /></td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- FOOTER -->
+
+<fieldset>
+  <legend>FOOTER</legend>
+  <table>
+    <tr>
+      <td colspan="3"><small>Only a few social links are included. Add more in your <strong>config/settings.html</strong> theme file.<br />Defaults and presets are set in <strong>config/settings_data.json</strong>.</small></td>
+    </tr>
+<!--      -->
+    <tr>
+      <th><label for="footer_display_contact">Show footer about info?</label></th>
+      <td colspan="2"><input type="checkbox" id="footer_display_contact" name="footer_display_contact" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="footer_contact_title">Footer about title</label></th>
+      <td colspan="2"><input type="text" id="footer_contact_title" name="footer_contact_title" value="" /></td>
+    </tr>
+    <tr>
+      <th><label for="footer_contact_text">Footer about text</label></th>
+      <td colspan="2">
+        <textarea name="footer_contact_text" cols="60" rows="5" id="footer_contact_text" value="" />
+        <small>Basic HTML formatting is allowed</small>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <th><label for="footer_display_footnav">Show First Footer Navigation?</label></th>
+      <td colspan="2"><input type="checkbox" id="footer_display_footnav" name="footer_display_footnav" value="1" /></td>
+    </tr>
+    
+    <tr>
+      <th><label for="footer_footnav_title">First Footer Nav Title</label></th>
+      <td colspan="2"><input type="text" id="footer_footnav_title" name="footer_footnav_title" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th><label for="footer_nav2_title">Second Footer Nav Title</label></th>
+      <td colspan="2"><input type="text" id="footer_nav2_title" name="footer_nav2_title" value="" /></td>
+    </tr>
+    <!--
+<tr>
+      <th><label for="footer_footnav_text">Footer Navigation 1</label></th>
+      <td colspan="2">
+        <textarea name="footer_footnav_text" cols="60" rows="5" id="footer_footnav_text" value="" />
+        <small>Basic HTML formatting is allowed</small>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="footer_footnav_texttwo">Footer Navigation 2</label></th>
+      <td colspan="2">
+        <textarea name="footer_footnav_texttwo" cols="60" rows="5" id="footer_footnav_texttwo" value="" />
+        <small>Basic HTML formatting is allowed</small>
+      </td>
+    </tr>
+-->
+    
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <th><label for="footer_display_social">Show social media links?</label></th>
+      <td colspan="2"><input type="checkbox" id="footer_display_social" name="footer_display_social" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="footer_social_title">Social media links title</label></th>
+      <td colspan="2"><input type="text" id="footer_social_title" name="footer_social_title" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="show_carousel_item_4">Twitter link</label></td>
+      <td colspan="2"><input type="url" id="twitter_link" name="twitter_link" size="50" /></td>
+    </tr>
+    <tr>
+      <td><label for="facebook_link">Facebook link</label></td>
+      <td colspan="2"><input type="url" id="facebook_link" name="facebook_link" size="50" /></td>
+    </tr>
+    <tr>
+      <td><label for="youtube_link">YouTube link</label></td>
+      <td colspan="2"><input type="url" id="youtube_link" name="youtube_link" size="50" /></td>
+    </tr>
+    <tr>
+      <td><label for="instagram_link">Instagram link</label></td>
+      <td colspan="2"><input type="url" id="instagram_link" name="instagram_link" size="50" /></td>
+    </tr>
+    <tr>
+      <td><label for="pinterest_link">Pinterest link</label></td>
+      <td colspan="2"><input type="url" id="pinterest_link" name="pinterest_link" size="50" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <th><label for="footer_display_newsletter">Show newsletter?</label></th>
+      <td colspan="2"><input type="checkbox" id="footer_display_newsletter" name="footer_display_newsletter" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="footer_newsletter_title">Newsletter title</label></th>
+      <td colspan="2"><input type="text" id="footer_newsletter_title" name="footer_newsletter_title" value="" /></td>
+    </tr>
+    <tr>
+      <th><label for="mailing_list_form_action">MailChimp form action URL</label></th>
+      <td><input type="text" id="mailing_list_form_action" name="mailing_list_form_action" value="" /></td>
+      <td><a href="http://docs.shopify.com/support/configuration/store-customization/where-do-i-get-my-mailchimp-form-action" target="_blank">Where do I find my MailChimp form action URL?</a></td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+
+<fieldset>
+  
+  <legend>FAQ</legend>
+  
+  <table>
+    
+    <tr>
+      <td colspan="3"><small>Enter frequently asked questions / answers below.</small></td>
+    </tr>
+    <tr>
+      <th><label for="question_one">Question 1</label></th>
+      <td colspan="2"><input type="text" id="question_one" name="question_one" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_one">Answer 1</label></th>
+      <td colspan="2"><input type="text" id="answer_one" name="answer_one" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_two">Question 2</label></th>
+      <td colspan="2"><input type="text" id="question_two" name="question_two" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_two">Answer 2</label></th>
+      <td colspan="2"><input type="text" id="answer_two" name="answer_two" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+
+    <tr>
+      <th><label for="question_three">Question 3</label></th>
+      <td colspan="2"><input type="text" id="question_three" name="question_three" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_three">Answer 3</label></th>
+      <td colspan="2"><input type="text" id="answer_three" name="answer_three" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_four">Question 4</label></th>
+      <td colspan="2"><input type="text" id="question_four" name="question_four" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_four">Answer 4</label></th>
+      <td colspan="2"><input type="text" id="answer_four" name="answer_four" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_five">Question 5</label></th>
+      <td colspan="2"><input type="text" id="question_five" name="question_five" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_five">Answer 5</label></th>
+      <td colspan="2"><input type="text" id="answer_five" name="answer_five" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_six">Question 6</label></th>
+      <td colspan="2"><input type="text" id="question_six" name="question_six" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_six">Answer 6</label></th>
+      <td colspan="2"><input type="text" id="answer_six" name="answer_six" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+
+    <tr>
+      <th><label for="question_seven">Question 7</label></th>
+      <td colspan="2"><input type="text" id="question_seven" name="question_seven" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_seven">Answer 7</label></th>
+      <td colspan="2"><input type="text" id="answer_seven" name="answer_seven" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_eight">Question 8</label></th>
+      <td colspan="2"><input type="text" id="question_eight" name="question_eight" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_eight">Answer 8</label></th>
+      <td colspan="2"><input type="text" id="answer_eight" name="answer_eight" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_nine">Question 9</label></th>
+      <td colspan="2"><input type="text" id="question_seven" name="question_nine" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_nine">Answer 9</label></th>
+      <td colspan="2"><input type="text" id="answer_nine" name="answer_nine" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+    <tr>
+      <th><label for="question_ten">Question 10</label></th>
+      <td colspan="2"><input type="text" id="question_ten" name="question_ten" value="1" /></td>
+    </tr>
+    <tr>
+      <th><label for="answer_ten">Answer 10</label></th>
+      <td colspan="2"><input type="text" id="answer_ten" name="answer_ten" value="" /></td>
+    </tr>
+    
+    <tr>
+      <th>&nbsp;</th>
+      <td colspan="2">
+      	&nbsp;
+      </td>
+    </tr>
+    
+  </table>
+  
+</fieldset>
+
+<fieldset>
+  <legend>CART</legend>
+  <table>
+    <tr>
+      <td><label for="cart_notes">Allow customers to add notes to their order?</label></td>
+      <td colspan="2">
+        <input type="checkbox" id="cart_notes" name="cart_notes" />
+        <small>Only enabled in the ajax cart if you use your <strong>cart.liquid</strong> markup. See docs below.</small>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="ajax_cart">Enable Ajaxify Cart</label></td>
+      <td colspan="2">
+        <input type="checkbox" id="ajax_cart" name="ajax_cart" />
+        <small>Documentation - <a href="http://shopify.com/timber#ajax-cart" title="Ajax Cart Documentation">http://shopify.com/timber#ajax-cart</a></small>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="ajax_cart_method">Ajax Cart Type</label></td>
+      <td colspan="2">
+        <select name="ajax_cart_method">
+          <option value="drawer">Drawer</option>
+          <option value="flip">Flip</option>
+          <option value="modal">Modal</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>eREADER / TABLET</legend>
+  
+  <table>
+    <tr>
+      <td><label for="desc_Tablet">Product Details</label></td>
+      <td><textarea name="desc_Tablet" cols="60" rows="5" id="desc_Tablet" value="" /></td>
+    </tr>
+    <tr>
+      <td><label for="size_Tablet">Size Guide</label></td>
+      <td colspan="2">
+        <textarea id="size_Tablet" name="size_Tablet"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="del_Tablet">Delivery and Returns</label></td>
+      <td colspan="2">
+        <textarea id="del_Tablet" name="del_Tablet"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="faq_Tablet">Questions Answered</label></td>
+      <td colspan="2">
+        <textarea id="faq_Tablet" name="faq_Tablet"></textarea>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>MOBILE</legend>
+  <table>
+    <tr>
+      <td><label for="desc_Mobile">Product Details</label></td>
+      <td colspan="2">
+        <textarea id="desc_Mobile" name="desc_Mobile"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="size_Mobile">Size Guide</label></td>
+      <td colspan="2">
+        <textarea id="size_Mobile" name="size_Mobile"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="del_Mobile">Delivery and Returns</label></td>
+      <td colspan="2">
+        <textarea id="del_Mobile" name="del_Mobile"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="faq_Mobile">Questions Answered</label></td>
+      <td colspan="2">
+        <textarea id="faq_Mobile" name="faq_Mobile"></textarea>
+      </td>
+    </tr>
+    </table>
+    <table>
+	<br/><br/>
+    <strong>- MOBILE 2 (leather)</strong>
+    <br/><br/>
+    <tr>
+      <td><label for="desc_Mobile2">Product Details - Ancient Oak</label></td>
+      <td colspan="2">
+        <textarea id="desc_Mobile2" name="desc_Mobile2"></textarea>
+      </td>
+    </tr>
+    
+    <tr>
+      <td><label for="desc_Mobile3">Product Details - Double Espresso</label></td>
+      <td colspan="2">
+        <textarea id="desc_Mobile3" name="desc_Mobile3"></textarea>
+      </td>
+    </tr>
+    
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>STORAGE</legend>
+  <table>
+    <tr>
+      <td><label for="desc_Storage">Product Details</label></td>
+      <td colspan="2">
+        <textarea id="desc_Storage" name="desc_Storage"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="size_Storage">Size Guide</label></td>
+      <td colspan="2">
+        <textarea id="size_Storage" name="size_Storage"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="del_Storage">Delivery and Returns</label></td>
+      <td colspan="2">
+        <textarea id="del_Storage" name="del_Storage"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="faq_Storage">Questions Answered</label></td>
+      <td colspan="2">
+        <textarea id="faq_Storage" name="faq_Storage"></textarea>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>STATIONARY</legend>
+  <table>
+    <tr>
+      <td><label for="desc_Stationary">Product Details</label></td>
+      <td colspan="2">
+        <textarea id="desc_Stationary" name="desc_Stationary"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="size_Stationary">Size Guide</label></td>
+      <td colspan="2">
+        <textarea id="size_Stationary" name="size_Stationary"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="del_Stationary">Delivery and Returns</label></td>
+      <td colspan="2">
+        <textarea id="del_Stationary" name="del_Stationary"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="faq_Stationary">Questions Answered</label></td>
+      <td colspan="2">
+        <textarea id="faq_Stationary" name="faq_Stationary"></textarea>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>PRODUCT VIDEOS</legend>
+  <table>
+    <tr>
+      <td><label for="vid_img_howto">How To Video Link Image</label></td>
+      <td><input type="file" name="HowToFit.jpg" id="vid_img_howto" data-max-width="360" data-max-height="224" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="vid_link_howto">How To Video Link</label></td>
+      <td><input type="url" name="vid_link_howto" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="vid_img_story">Story Video Link Image</label></td>
+      <td><input type="file" name="Story.jpg" id="vid_img_story" data-max-width="360" data-max-height="224" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="vid_link_story">Story Video Link</label></td>
+      <td><input type="url" name="vid_link_story" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="vid_img_phone">Phone Cases Video Link Image</label></td>
+      <td><input type="file" name="PhoneFit.jpg" id="vid_img_phone" data-max-width="360" data-max-height="224" /></td>
+    </tr>
+    
+    <tr>
+      <td><label for="vid_link_phone">Phone Cases Video Link</label></td>
+      <td><input type="url" name="vid_link_phone" /></td>
+    </tr>
+  </table>
+</fieldset>

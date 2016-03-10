@@ -1,0 +1,1785 @@
+[
+  {
+    "name": "Welcome",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Theme settings allow designers to provide an easy way for any user to customize the look and feel of their shop without having to delve into HTML or CSS code. Please see our [help page on theme settings](http:\/\/docs.shopify.com\/themes\/theme-templates\/settings) to learn more about how you can make your theme customizable."
+      }
+    ]
+  },
+  {
+    "name": "LOGO",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_logo",
+        "label": "Use Custom Logo?"
+      },
+      {
+        "type": "image",
+        "id": "logo.png",
+        "label": "Custom Logo",
+        "max-width": 500,
+        "max-height": 200
+      },
+      {
+        "type": "paragraph",
+        "content": "Maximum logo dimensions are 500px wide by 200px high.Your uploaded file will be resized to fit within those constraints."
+      }
+    ]
+  },
+  {
+    "name": "SLIDER",
+    "settings": [
+      {
+        "type": "image",
+        "id": "static_head.jpg",
+        "label": "Static Header Image",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_static",
+        "label": "Link URL:"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_slider",
+        "label": "Use Slider?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Optimum slide dimensions are 1280px wide by 550px high.Your uploaded file will be resized to fit within those constraints."
+      },
+      {
+        "type": "image",
+        "id": "slide1.png",
+        "label": "SLIDE ONE",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_one",
+        "label": "Link URL:"
+      },
+      {
+        "type": "image",
+        "id": "slide2.png",
+        "label": "SLIDE TWO",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_two",
+        "label": "Link URL:"
+      },
+      {
+        "type": "image",
+        "id": "slide3.png",
+        "label": "SLIDE THREE",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_three",
+        "label": "Link URL:"
+      },
+      {
+        "type": "image",
+        "id": "slide4.png",
+        "label": "SLIDE FOUR",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_four",
+        "label": "Link URL:"
+      },
+      {
+        "type": "image",
+        "id": "slide5.png",
+        "label": "SLIDE FIVE",
+        "max-width": 1280,
+        "max-height": 550
+      },
+      {
+        "type": "text",
+        "id": "slide_link_five",
+        "label": "Link URL:"
+      }
+    ]
+  },
+  {
+    "name": "HOMPAGE",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "intro_title",
+        "label": "Intro Title"
+      },
+      {
+        "type": "textarea",
+        "id": "intro_text",
+        "label": "Intro Text"
+      },
+      {
+        "type": "image",
+        "id": "Grid1.jpg",
+        "label": "Grid 1 Image",
+        "max-width": 600,
+        "max-height": 908
+      },
+      {
+        "type": "text",
+        "id": "grid_title_one",
+        "label": "Grid 1 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_one",
+        "label": "Grid 1 Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_1",
+        "label": "Grid 1 Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "grid1_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorOne",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "Grid2.jpg",
+        "label": "Grid 2 Image",
+        "max-width": 600,
+        "max-height": 446
+      },
+      {
+        "type": "text",
+        "id": "grid_title_two",
+        "label": "Grid 2 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_two",
+        "label": "Grid 2 Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_2",
+        "label": "Grid 2 Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "grid2_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorTwo",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "Grid3.jpg",
+        "label": "Grid 3 Image",
+        "max-width": 600,
+        "max-height": 446
+      },
+      {
+        "type": "text",
+        "id": "grid_title_three",
+        "label": "Grid 3 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_three",
+        "label": "Grid 3 Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_3",
+        "label": "Grid 3 Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "grid3_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorThree",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "GridPromo.jpg",
+        "label": "Grid Promo Image",
+        "max-width": 1224,
+        "max-height": 225
+      },
+      {
+        "type": "text",
+        "id": "grid_title_promo",
+        "label": "Grid Promo Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_promo",
+        "label": "Grid Promo Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_promo",
+        "label": "Promo Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "page",
+        "id": "promo_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorPromo",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "GridVideo.jpg",
+        "label": "Grid Video Image",
+        "max-width": 600,
+        "max-height": 446
+      },
+      {
+        "type": "text",
+        "id": "grid_title_video",
+        "label": "Grid Video Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_video",
+        "label": "Grid Video Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_video",
+        "label": "Video Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "page",
+        "id": "video_link",
+        "label": "Grid Video Link"
+      },
+      {
+        "type": "select",
+        "id": "colorVideo",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "Grid4.jpg",
+        "label": "Grid 4 Image",
+        "max-width": 600,
+        "max-height": 446
+      },
+      {
+        "type": "text",
+        "id": "grid_title_four",
+        "label": "Grid 4 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_four",
+        "label": "Grid 4 Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_4",
+        "label": "Grid 4 Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "grid4_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorFour",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "Grid5.jpg",
+        "label": "Grid 5 Image",
+        "max-width": 600,
+        "max-height": 908
+      },
+      {
+        "type": "text",
+        "id": "grid_title_five",
+        "label": "Grid 5 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "grid_text_five",
+        "label": "Grid 5 Text"
+      },
+      {
+        "type": "radio",
+        "id": "grid_align_5",
+        "label": "Grid 5 Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "grid5_collection",
+        "label": "Link to Collection"
+      },
+      {
+        "type": "select",
+        "id": "colorFive",
+        "label": "Text Colour",
+        "options": [
+          {
+            "value": "#515151",
+            "label": "Dark Grey"
+          },
+          {
+            "value": "#666666",
+            "label": "Mid Grey"
+          },
+          {
+            "value": "#c2502d",
+            "label": "Orange"
+          },
+          {
+            "value": "#f5f4ef",
+            "label": "Off White"
+          }
+        ],
+        "default": "#515151"
+      },
+      {
+        "type": "image",
+        "id": "Base1.jpg",
+        "label": "Base 1 Image",
+        "max-width": 350,
+        "max-height": 233
+      },
+      {
+        "type": "text",
+        "id": "base_title_one",
+        "label": "Base 1 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "base_text_one",
+        "label": "Base 1 Text"
+      },
+      {
+        "type": "text",
+        "id": "baselink_1",
+        "label": "Link to Post"
+      },
+      {
+        "type": "image",
+        "id": "Base2.jpg",
+        "label": "Base 2 Image",
+        "max-width": 350,
+        "max-height": 233
+      },
+      {
+        "type": "text",
+        "id": "base_title_two",
+        "label": "Base 2 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "base_text_two",
+        "label": "Base 2 Text"
+      },
+      {
+        "type": "text",
+        "id": "baselink_2",
+        "label": "Link to Post"
+      },
+      {
+        "type": "image",
+        "id": "Base3.jpg",
+        "label": "Base 3 Image",
+        "max-width": 350,
+        "max-height": 233
+      },
+      {
+        "type": "text",
+        "id": "base_title_three",
+        "label": "Base 3 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "base_text_three",
+        "label": "Base 3 Text"
+      },
+      {
+        "type": "text",
+        "id": "baselink_3",
+        "label": "Link\/URL to Blog Post or Page"
+      }
+    ]
+  },
+  {
+    "name": "VIDEOS",
+    "settings": [
+      {
+        "type": "text",
+        "id": "videoOne_Title",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "videoOne",
+        "label": "Video Embed Code"
+      },
+      {
+        "type": "text",
+        "id": "videoTwo_Title",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "videoTwo",
+        "label": "Video Embed Code"
+      },
+      {
+        "type": "text",
+        "id": "videoThree_Title",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "videoThree",
+        "label": "Video Embed Code"
+      },
+      {
+        "type": "text",
+        "id": "videoFour_Title",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "videoFour",
+        "label": "Video Embed Code"
+      },
+      {
+        "type": "text",
+        "id": "videoFive_Title",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "videoFive",
+        "label": "Video Embed Code"
+      }
+    ]
+  },
+  {
+    "name": "SOCIAL",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Social helpers include Facebook Open Graph Tags and Twitter Cards. Enable or disable them here, all of the code is taking care of for you in snippets."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_opengraph",
+        "label": "Enable [Facebook Open Graph Tags](https:\/\/developers.facebook.com\/docs\/opengraph\/using-objects\/)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_twittercards",
+        "label": "Enable [Twitter Cards](https:\/\/dev.twitter.com\/docs\/cards\/types\/product-card)"
+      },
+      {
+        "type": "text",
+        "id": "twittercard_handle",
+        "label": "Your site's Twitter Handle",
+        "info": "E.g. @Shopify. Required if Twitter Cards are enabled."
+      }
+    ]
+  },
+  {
+    "name": "HEADER",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header_text_first",
+        "label": "First Header Text"
+      },
+      {
+        "type": "collection",
+        "id": "header_link_first",
+        "label": "First Header Link"
+      },
+      {
+        "type": "text",
+        "id": "header_text_second",
+        "label": "Second Header Text"
+      },
+      {
+        "type": "collection",
+        "id": "header_link_second",
+        "label": "Second Header Link"
+      },
+      {
+        "type": "text",
+        "id": "shipping_notice",
+        "label": "Free Shipping Notice"
+      }
+    ]
+  },
+  {
+    "name": "FOOTER",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Only a few social links are included. Add more in your config\/settings.html theme file.Defaults and presets are set in config\/settings_data.json."
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_display_contact",
+        "label": "Show footer about info?"
+      },
+      {
+        "type": "text",
+        "id": "footer_contact_title",
+        "label": "Footer about title"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_contact_text",
+        "label": "Footer about text",
+        "info": "Basic HTML formatting is allowed"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_display_footnav",
+        "label": "Show First Footer Navigation?"
+      },
+      {
+        "type": "text",
+        "id": "footer_footnav_title",
+        "label": "First Footer Nav Title"
+      },
+      {
+        "type": "text",
+        "id": "footer_nav2_title",
+        "label": "Second Footer Nav Title"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_display_social",
+        "label": "Show social media links?"
+      },
+      {
+        "type": "text",
+        "id": "footer_social_title",
+        "label": "Social media links title"
+      },
+      {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Twitter link"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook link"
+      },
+      {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "YouTube link"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram link"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_link",
+        "label": "Pinterest link"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_display_newsletter",
+        "label": "Show newsletter?"
+      },
+      {
+        "type": "text",
+        "id": "footer_newsletter_title",
+        "label": "Newsletter title"
+      },
+      {
+        "type": "text",
+        "id": "mailing_list_form_action",
+        "label": "MailChimp form action URL",
+        "info": "[Where do I find my MailChimp form action URL?](http:\/\/docs.shopify.com\/support\/configuration\/store-customization\/where-do-i-get-my-mailchimp-form-action)"
+      }
+    ]
+  },
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Enter frequently asked questions \/ answers below."
+      },
+      {
+        "type": "text",
+        "id": "question_one",
+        "label": "Question 1",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_one",
+        "label": "Answer 1"
+      },
+      {
+        "type": "text",
+        "id": "question_two",
+        "label": "Question 2",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_two",
+        "label": "Answer 2"
+      },
+      {
+        "type": "text",
+        "id": "question_three",
+        "label": "Question 3",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_three",
+        "label": "Answer 3"
+      },
+      {
+        "type": "text",
+        "id": "question_four",
+        "label": "Question 4",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_four",
+        "label": "Answer 4"
+      },
+      {
+        "type": "text",
+        "id": "question_five",
+        "label": "Question 5",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_five",
+        "label": "Answer 5"
+      },
+      {
+        "type": "text",
+        "id": "question_six",
+        "label": "Question 6",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_six",
+        "label": "Answer 6"
+      },
+      {
+        "type": "text",
+        "id": "question_seven",
+        "label": "Question 7",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_seven",
+        "label": "Answer 7"
+      },
+      {
+        "type": "text",
+        "id": "question_eight",
+        "label": "Question 8",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_eight",
+        "label": "Answer 8"
+      },
+      {
+        "type": "text",
+        "id": "question_nine",
+        "label": "Question 9",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_nine",
+        "label": "Answer 9"
+      },
+      {
+        "type": "text",
+        "id": "question_ten",
+        "label": "Question 10",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "answer_ten",
+        "label": "Answer 10"
+      }
+    ]
+  },
+  {
+    "name": "CART",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes",
+        "label": "Allow customers to add notes to their order?",
+        "info": "Only enabled in the ajax cart if you use your cart.liquid markup. See docs below."
+      },
+      {
+        "type": "checkbox",
+        "id": "ajax_cart",
+        "label": "Enable Ajaxify Cart",
+        "info": "Documentation - [http:\/\/shopify.com\/timber#ajax-cart](http:\/\/shopify.com\/timber#ajax-cart)"
+      },
+      {
+        "type": "select",
+        "id": "ajax_cart_method",
+        "label": "Ajax Cart Type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          },
+          {
+            "value": "flip",
+            "label": "Flip"
+          },
+          {
+            "value": "modal",
+            "label": "Modal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BL PAPERWHITE \/ 7TH",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_pw",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_pw",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_pw",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_pw",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL VOYAGE",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_kv",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_kv",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_kv",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_kv",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL IPAD MINI",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_im",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_im",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_im",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_im",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL SIZE 1",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_s1",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_s1",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_s1",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_s1",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL SIZE 2",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_s2",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_s2",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_s2",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_s2",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL GENERIC",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_gi",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_gi",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_gi",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_gi",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BL CUSTOM",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_cc",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_cc",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_cc",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_cc",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "LEATHER IPHONE",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_lip",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_lip",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_lip",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_lip",
+        "label": "Questions Answered"
+      },
+      {
+        "type": "paragraph",
+        "content": "- MOBILE 2 (leather)"
+      },
+      {
+        "type": "textarea",
+        "id": "desc_Mobile2",
+        "label": "Product Details - Ancient Oak"
+      },
+      {
+        "type": "textarea",
+        "id": "desc_Mobile3",
+        "label": "Product Details - Double Espresso"
+      }
+    ]
+  },
+  {
+    "name": "LEATHER IPAD MINI",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_lim",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_lim",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_lim",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_lim",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "LEATHER 6IN",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_l6i",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_l6i",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_l6i",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_l6i",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BT DISPLAY BOOKS",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_db",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_db",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_db",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_db",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BT OFFICE FILES",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_of",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_of",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_of",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_of",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BT STATIONARY",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_st",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_st",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_st",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_st",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BT WEDDING",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_ws",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_ws",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_ws",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_ws",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BT POSTERS",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_bp",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_bp",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_bp",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_bp",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "BABY",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_Baby",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_Baby",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_Baby",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_Baby",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "MOTHERS DAY",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_Mothers",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_Mothers",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_Mothers",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_Mothers",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "FATHERS DAY",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "desc_Fathers",
+        "label": "Product Details"
+      },
+      {
+        "type": "textarea",
+        "id": "size_Fathers",
+        "label": "Size Guide"
+      },
+      {
+        "type": "textarea",
+        "id": "del_Fathers",
+        "label": "Delivery and Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "faq_Fathers",
+        "label": "Questions Answered"
+      }
+    ]
+  },
+  {
+    "name": "PRODUCT VIDEOS",
+    "settings": [
+      {
+        "type": "image",
+        "id": "HowToFit.jpg",
+        "label": "How To Video Link Image",
+        "max-width": 360,
+        "max-height": 224
+      },
+      {
+        "type": "text",
+        "id": "vid_link_howto",
+        "label": "How To Video Link"
+      },
+      {
+        "type": "image",
+        "id": "Story.jpg",
+        "label": "Story Video Link Image",
+        "max-width": 360,
+        "max-height": 224
+      },
+      {
+        "type": "text",
+        "id": "vid_link_story",
+        "label": "Story Video Link"
+      },
+      {
+        "type": "image",
+        "id": "PhoneFit.jpg",
+        "label": "Phone Cases Video Link Image",
+        "max-width": 360,
+        "max-height": 224
+      },
+      {
+        "type": "text",
+        "id": "vid_link_phone",
+        "label": "Phone Cases Video Link"
+      }
+    ]
+  },
+  {
+    "name": "Money options",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Enable Auto Currency App?",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_decimal_places",
+        "label": "Show Decimal Digits?"
+      },
+      {
+        "type": "paragraph",
+        "content": "By selecting the Show Decimal Places checkbox, the prices will be diplayed with values after decimal place. Else, they will be replaced by zero"
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Money format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without Currency, ex: $10.00"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With Currency, ex: $10 CAD"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Currencies you wish to support",
+        "default": "INR GBP CAD USD AUD EUR JPY"
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      },
+      {
+        "type": "paragraph",
+        "content": "Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click [here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD."
+      },
+      {
+        "type": "paragraph",
+        "content": "* For this functionality to work in your shop, you are required to edit your money formats as per [these instructions](http:\/\/wiki.shopify.com\/Do_Tell_Where_The_Money_Is) (“Do tell where the money is”)."
+      }
+    ]
+  },
+  {
+    "name": "Modal Styles",
+    "settings": [
+      {
+        "type": "color",
+        "id": "modal_overlay_color",
+        "label": "Modal Overlay Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "modal_bg_transparency",
+        "label": "Modal Overlay Opacity (0–1.0)",
+        "default": "0.75"
+      },
+      {
+        "type": "select",
+        "id": "modal_text_align",
+        "label": "Modal Text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "color",
+        "id": "modal_bg_color",
+        "label": "Modal Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "modal_border_color",
+        "label": "Modal Border Color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Popup Email Signup",
+    "settings": [
+      {
+        "type": "text",
+        "id": "modal_trigger",
+        "label": "Popup Trigger Text",
+        "default": "Newsletter →"
+      },
+      {
+        "type": "text",
+        "id": "modal_title",
+        "label": "Sign Up Title",
+        "default": "Sign Up!"
+      },
+      {
+        "type": "text",
+        "id": "modal_submit_text",
+        "label": "Sign Up button text:",
+        "default": "Sign Up!"
+      },
+      {
+        "type": "text",
+        "id": "nowayjose_text",
+        "label": "No Thanks button text:",
+        "default": "Nope!"
+      },
+      {
+        "type": "select",
+        "id": "modal_signup_first",
+        "label": "Which Visit to Popup First",
+        "options": [
+          {
+            "value": "0",
+            "label": "0 (inactive)"
+          },
+          {
+            "value": "1",
+            "label": "1st"
+          },
+          {
+            "value": "2",
+            "label": "2nd"
+          },
+          {
+            "value": "3",
+            "label": "3rd"
+          },
+          {
+            "value": "4",
+            "label": "4th"
+          }
+        ],
+        "default": "0"
+      },
+      {
+        "type": "select",
+        "id": "modal_signup_total",
+        "label": "Pop Up on Multiple Visits?",
+        "options": [
+          {
+            "value": "0",
+            "label": "No, just once"
+          },
+          {
+            "value": "1",
+            "label": "twice"
+          },
+          {
+            "value": "2",
+            "label": "three times"
+          },
+          {
+            "value": "3",
+            "label": "four times"
+          },
+          {
+            "value": "4",
+            "label": "five times"
+          },
+          {
+            "value": "5",
+            "label": "six times"
+          },
+          {
+            "value": "6",
+            "label": "seven times"
+          },
+          {
+            "value": "7",
+            "label": "eight times"
+          },
+          {
+            "value": "8",
+            "label": "nine times"
+          },
+          {
+            "value": "9",
+            "label": "ten times"
+          }
+        ],
+        "default": "0"
+      },
+      {
+        "type": "select",
+        "id": "modal_signup_page_view",
+        "label": "Within a visit, which page?",
+        "options": [
+          {
+            "value": "1",
+            "label": "1st page"
+          },
+          {
+            "value": "2",
+            "label": "2nd page"
+          },
+          {
+            "value": "3",
+            "label": "3rd page"
+          },
+          {
+            "value": "4",
+            "label": "4th page"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "modal_signup_delay_time",
+        "label": "Pop Up Delay Time (milliseconds)",
+        "default": "2000"
+      },
+      {
+        "type": "select",
+        "id": "modal_show_on_mobile_device",
+        "label": "Show popup on mobile devices",
+        "options": [
+          {
+            "value": "true",
+            "label": "Yes"
+          },
+          {
+            "value": "false",
+            "label": "No"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "select",
+        "id": "modal_success_callback",
+        "label": "What to show on successful submission",
+        "options": [
+          {
+            "value": "server",
+            "label": "Server Response"
+          },
+          {
+            "value": "promo",
+            "label": "Promo Code"
+          }
+        ],
+        "default": "server"
+      },
+      {
+        "type": "text",
+        "id": "modal_promo_code",
+        "label": "Promo Code:",
+        "info": "Must be enabled in preceding select menu"
+      }
+    ]
+  },
+  {
+    "name": "Facebook Tracking for Email Signups",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "signup_fb_tracking",
+        "label": "Enable FB tracking"
+      },
+      {
+        "type": "text",
+        "id": "signup_fb_pixel",
+        "label": "FB Pixel ID",
+        "default": "_"
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{% if settings.use_slider %}
+	
+	<div class="slider-wrapper theme-default">
+		
+		<div id="slider" class="nivoSlider">
+			
+			<a href="{{ settings.slide_link_one }}">{{ 'slide1.png' | asset_url | img_tag: shop.name }}</a>
+			
+			<a href="{{ settings.slide_link_two }}">{{ 'slide2.png' | asset_url | img_tag: shop.name }}</a>
+			
+			<a href="{{ settings.slide_link_three }}">{{ 'slide3.png' | asset_url | img_tag: shop.name }}</a>
+			
+			<a href="{{ settings.slide_link_four }}">{{ 'slide4.png' | asset_url | img_tag: shop.name }}</a>
+		
+		</div>
+			
+	</div>
+	
+	{% else %}
+
+	<a href="{{ settings.slide_link_static }}">{{ 'static_head.jpg' | asset_url | img_tag: shop.name }}</a>
+
+{% endif %}

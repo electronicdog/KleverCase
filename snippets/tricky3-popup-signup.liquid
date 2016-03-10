@@ -1,0 +1,30 @@
+<!-- Take your MailChimp subscribe form as generated from within your account: -->
+<!-- [form is t3-modified html5 - copy and paste values for best results:] -->
+<div id="mc_embed_popup" class="modalHolder">
+  <div class="ycenter">
+    <div class="xcenter">
+      <div class="modal">
+        <div class="closebox"><div class="poplogo"><img src="http://cdn.shopify.com/s/files/1/0410/3633/t/4/assets/logo.png?3694326446516918044" /></div><a class="popupClose Closebtn">CLOSE</a></div>
+        <form action="//manorbindery.us2.list-manage.com/subscribe/post?u=e2fff5bdbb1e37481760fec50&amp;id=59fee24057" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <fieldset class="mc-field-group">
+            <div class="msgholder">
+            <legend><p>{{ settings.modal_title }}</p></legend>
+            </div>
+            <div class="popholder">
+            <input type="text" name="cm-name" id="name" placeholder="Name..." class="pop">
+            <input type="email" name="EMAIL" class="required email pop" data-bvalidator="required,email" id="mce-EMAIL" placeholder="Email..."{% if customer %} value="{{ customer.email }}"{% endif %} required>
+            <input type="submit" value="{{ settings.modal_submit_text }}" class="awesome pop">
+            <input type="button" value="{{ settings.nowayjose_text }}" class="not awesome popupClose pop">
+            </div>
+          </fieldset>
+          <div id="mce-responses" class="clearfix response-wrapper">
+            <div class="response mce-error-response" style="display:none"></div>
+            <div class="response mce-success-response" style="display:none"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- external trigger if you want one on the page -->
+<a href="http://" class="popupTrigger">{{ settings.modal_trigger }}</a>

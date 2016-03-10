@@ -1,0 +1,347 @@
+{% layout 'productwrap' %}
+
+{% comment %}
+
+  Rich snippets (itemscope, itemtype, etc.) for products are a theme requirement,
+  and allow search engines to easily understand what the content is.
+
+  For more information on these Scheme.org tags, visit:
+    - http://schema.org/docs/gs.html
+
+{% endcomment %}
+<div class="pushdown">&nbsp;</div>
+<div itemscope itemtype="http://schema.org/Product">
+
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}">
+
+  {% include 'breadcrumb' %}
+
+  <div class="wrapper">
+  
+	  <div class="grid">
+	    <div class="grid-item large--two-thirds">
+	
+	      {% comment %}
+	        If we only have one product image, show a large version of it.
+	        If we have more than 1, show it then loop through the rest as thumbnails.
+	      {% endcomment %}
+	      {% if product.images.size == 0 %}
+	
+	        <div id="productPhoto" class="product-photo-container">
+	          <img src="{{ '' | product_img_url: 'grande' }}" alt="">
+	        </div>
+	
+	      {% else %}
+	
+	        {% include 'magiczoomplus' %}
+	
+	    {% comment %}
+          If we have more than one product image, loop through them and create thumbnails.
+
+          By default, images will link to their grande size (600x600).
+          Thumbnail swapping is enabled in shop.js.liquid.
+		{% endcomment %}
+			
+	      {% endif %}
+		
+		<hr>
+		
+		{% include 'related-products' %}
+		
+	    </div>
+		
+	    <div class="grid-item large--one-third">
+	
+	      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+	
+	        <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+	
+	        <header class="page-header">
+	          <h2 itemprop="name">{{ product.title }}</h2>
+	        </header>
+			
+			{% if product.compare_at_price > product.price %}
+	            <strong class="h2">
+	              <span id="productPrice" class="on-sale" itemprop="price">
+	                <strike class="saleprice"><span class="presale">{{ product.compare_at_price_max | money }}</span></strike><br/>
+	                <span class="saleprice">{{ product.price | money }}</span>
+	              </span>
+	            </strong>
+<!--
+	            <small id="comparePrice">
+	              Compare at:
+	              {{ product.compare_at_price_max | money }}
+	            </small>
+-->
+	          {% else %}
+	          <strong class="h2">
+	              <span id="productPrice" itemprop="price">
+	                {{ product.price | money }}
+	              </span>
+	            </strong>
+	          {% endif %}
+			 
+<!--
+			{% if collection.handle == 'sale' %}
+				<div class="timrbox">
+					{% include 'shappify-sales-clock' %}
+				</div>
+			{% endif %}
+-->
+			<div class="timrbox">
+				{% include 'shappify-sales-clock' %}
+			</div>
+			
+						
+			<div style="font-size:1em; color: #c2502d;">{{ settings.shipping_notice }}</div>
+			<div style="font-size:1em; color: #c2502d;">90 DAY RETURNS</div>
+			<div style="font-size:1em; color: #c2502d;">1 YEAR GUARANTEE</div>
+			
+			<br />
+	        {% if product.available %}
+	          <link itemprop="availability" href="http://schema.org/InStock">
+	        {% else %}
+	          <link itemprop="availability" href="http://schema.org/OutOfStock">
+	        {% endif %}
+	
+	        {% comment %}
+	          ID addToCartForm is a selector for the ajaxify cart plugin
+	        {% endcomment %}
+	        <form action="/cart/add" method="post" enctype="multipart/form-data" id="addToCartForm">
+	
+	          {% comment %}
+	            Add product variants as a dropdown.
+	              - By default, each variant (or combination of variants) will display as its own <option>
+	              - To separate these into multiple steps, which we suggest, use option_selection.js (see below)
+	
+	            You can leverage jQuery to add a callback on page load and each time the select element changes:
+	              - Include option_selection.js (as seen at the bottom of this file)
+	              - This allows you to use JavaScript anytime the variant dropdown changes
+	              - This also separates out your variant options (ie. size, color, etc.) to separate select elements
+	
+	            For more information on products with multiple options, visit:
+	              - http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options#update-product-liquid
+	
+	          {% endcomment %}
+	          <!-- <label for="productSelect">Select Product</label> -->
+	          <select name="id" id="productSelect">
+	            {% for variant in product.variants %}
+	              {% if variant.available %}
+	
+	                {% comment %}
+	                  Note: if you use option_selection.js, your <select> tag will be overwritten, meaning what you have inside <option> will not reflect what you coded below.
+	                {% endcomment %}
+	                <option value="{{variant.id}}">
+	                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+	                </option>
+	
+	              {% else %}
+	                <option disabled="disabled">
+	                  {{ variant.title }} - Sold out
+	                </option>
+	              {% endif %}
+	            {% endfor %}
+	          </select>
+	
+	          {% comment %}
+	            Optionally show the 'compare at' or original price of the product.
+	          {% endcomment %}
+	          	
+	          {% comment %}
+	            Quantity selector is optional
+	          {% endcomment %}
+	          <label for="quantity">Qty: </label>
+	          <input min="1" type="number" id="quantity" name="quantity" value="1">
+			  
+			  <div class="property-wrapper hidden" id="initial-wrapper" >
+			  	  <label for="initial-property">Initials: <span class="greyed">(1-4 letters)</span></label>
+			  	  <textarea class="monogram" maxlength="4" placeholder="..." id="initial-property" name="properties[Initials]" value="" disabled="disabled"></textarea>
+			  	  {% if product.title == "__CUSTOM TEST" %}
+			  	  	{% include 'customization-engine-button' %}<br/>
+			  	  {% endif %}
+			  </div>
+			  
+			  <div class="property-wrapper hidden" id="lettering-wrapper" >
+			  	  <label for="lettering-property">Personal lettering: <span class="greyed"><br/>(2 lines, max 10 characters per line)</span></label>
+			  	  <textarea class="monogram" maxlength="10" placeholder="First line here..." id="lettering-property" name="properties[Line 1]" value="" disabled="disabled"></textarea>
+			  	  
+			  	  <textarea class="monogram" maxlength="10" placeholder="Second line here..." id="lettering-property" name="properties[Line 2]" value="" disabled="disabled"></textarea>
+			  	  {% if product.title == "__CUSTOM TEST" %}
+			  	  	{% include 'customization-engine-button' %}<br/>
+			  	  {% endif %}
+			  </div>
+
+	          <input type="submit" name="add" class="btn _right" id="addToCart" value="Add to Cart">
+
+	        </form>
+	
+	        <div class="product-description rte" itemprop="description">
+	          {{ product.description }}
+	        </div>
+			
+	      </div>
+		  
+		  	  
+		  {% include 'accordian_code' %}
+		  
+		  {% include 'review-code' %}
+		  
+	      {% comment %}
+	        If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
+	        in the URL, we can show next/previous links to other products in the collection.
+	      {% endcomment %}
+	      {% if collection %}
+	        {% if collection.previous_product or collection.next_product %}
+	
+	          {% if collection.previous_product %}
+	            {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
+	            <div class="prev_left">
+	              {{ '<span class="prev"> </span>' | link_to: prev_url }}
+	            </div>
+	          {% endif %}
+	
+	          {% if collection.next_product %}
+	            {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
+	            <div class="next_right">
+	              {{ '<span class="next"> </span>' | link_to: next_url }}
+	            </div>
+	          {% endif %}
+	
+	        {% endif %}
+	      {% endif %}
+
+	    </div>
+	    	    
+	  </div>
+	  
+  </div>
+  
+</div>
+
+
+{% comment %}
+  To take advantage of a callback on the select dropdown, add option_selection.js
+  and customize the JS below as you need. This is only needed on pages where
+  product variants are accessible, so doesn't need to live in theme.liquid.
+
+  Currently, the code below does:
+    - Overwrites your <select> tag from above
+    - Breaks out the product variants into separate fields, if more than one exists
+{% endcomment %}
+
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+<script>
+
+var selectCallback = function(variant, selector) {
+
+  var addToCart = $('#addToCart'),
+      productPrice = $('#productPrice'),
+      comparePrice = $('#comparePrice');
+
+  if (variant) {
+    if (variant.available) {
+      // We have a valid product variant, so enable the submit button
+      addToCart.removeClass('disabled').removeAttr('disabled').val('Add to Cart');
+
+    } else {
+      // Variant is sold out, disable the submit button
+      addToCart.val('Sold Out').addClass('disabled').attr('disabled', 'disabled');
+    }
+
+    // Regardless of stock, update the product price
+    productPrice.html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}"));
+
+    // Also update and show the product's compare price if necessary
+    if ( variant.compare_at_price > variant.price ) {
+      comparePrice
+        .html('Compare at: ' + Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}"))
+        .show();
+    } else {
+      comparePrice.hide();
+    }
+
+  } else {
+    // The variant doesn't exist. Just a safegaurd for errors, but disable the submit button anyway
+    addToCart.val('Add to Cart').addClass('disabled').attr('disabled', 'disabled');
+  }
+};
+
+jQuery(function($) {
+
+  new Shopify.OptionSelectors('productSelect', {
+    product: {{ product | json }},
+    onVariantSelected: selectCallback
+  });
+  
+  // Add 'Please Select' Field to options.
+  {% if product.variants.size > 0 %}
+  {% for option in product.options %}
+    $('.single-option-selector:eq({{ forloop.index0 }})')
+    .filter(function() { return $(this).find('option').size() > 0  })
+    .prepend('<option value="">Please Select</option>')
+    .val('')
+    .trigger('change');
+  {% endfor %}
+{% endif %}
+
+  
+  // Toggle monogram text box.
+	jQuery('.single-option-selector:eq({{ product.options.size | minus: 1 }})').change(function() {
+	  if (jQuery(this).val() === 'Initials') {
+	    jQuery('#initial-wrapper').removeClass('hidden').fadeTo(1000,1);
+	    jQuery('#initial-wrapper textarea').removeAttr('disabled').removeClass('disabled');
+	  }
+	  else {
+	    jQuery('#initial-wrapper').fadeTo(1000,0).addClass('hidden');
+	    jQuery('#initial-wrapper textarea').addClass('disabled').attr('disabled', 'disabled'); 
+	  }
+	  if (jQuery(this).val() === 'Lettering') {
+	    jQuery('#lettering-wrapper').removeClass('hidden').fadeTo(400,1);
+	    jQuery('#lettering-wrapper textarea').removeAttr('disabled').removeClass('disabled');
+	  }
+	  else {
+	    jQuery('#lettering-wrapper').fadeTo(400,0).addClass('hidden');
+	    jQuery('#lettering-wrapper textarea').addClass('disabled').attr('disabled', 'disabled'); 
+	  }
+	});
+
+  // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+  {% if product.options.size == 1 and product.options.first != 'Title' %}
+    $('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first }}</label>');
+  {% endif %}
+
+  // Hide selectors if we only have 1 variant and its title contains 'Default'.
+  {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+    $('.selector-wrapper').hide();
+  {% endif %}
+
+  // Auto-select first available variant on page load. Otherwise the product looks sold out.
+  /*
+{% assign found_one_in_stock = false %}
+  {% for variant in product.variants %}
+    {% if variant.available and found_one_in_stock == false %}
+      {% assign found_one_in_stock = true %}
+      {% for option in product.options %}
+      $('.single-option-selector:eq({{ forloop.index0 }})').val({{ variant.options[forloop.index0] | json }}).trigger('change');
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+*/
+
+});
+
+</script>
+
+<script type="text/javascript" src="{{ 'jquery_accordion.js' | asset_url }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.accordion').accordion({
+defaultOpen: 'section1',
+cookieName: 'accordion_nav'
+});
+});
+</script>
+<style>
+	
+</style>

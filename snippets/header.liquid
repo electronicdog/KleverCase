@@ -1,0 +1,55 @@
+<header class="site-header">
+	
+	{% include 'headerbar' %}
+    
+    <div class="head_wrap">
+
+      {% comment %}
+        Use the uploaded logo from theme settings if enabled
+      {% endcomment %}
+      
+      <div id="bar">
+	      <a href="http://manorbindery.myshopify.com">
+		      <h2 class="header-logo">
+		      	<!-- <img src="https://cdn.shopify.com/s/files/1/0410/3633/files/klevercaselogo.png?7503"/> -->
+		      	<!-- BOOKFOX -->
+		        		{% if settings.use_logo %}
+							<a href="/" itemprop="url">
+								<img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo">
+              				</a>
+		 		        {% else %}
+		        <a href="http://manorbindery.myshopify.com"><!-- {{ shop.name }} --><img src="https://cdn.shopify.com/s/files/1/0410/3633/files/klevercaselogo.png?7503"/></a>
+		        {% endif %}
+		
+		      </h2>
+		  </a>
+		  <div style="clear:both;"></div>
+	  </div>
+	  
+      <div class="text-center large-right large--text-right pad topnavi">
+        {% comment %}
+          You cart/checkout link should at least show the number of items in it.
+          Below shows the item count followed by item(s) and the total cart price.
+
+          Ajaxify Cart Notes:
+            - #cartToggle toggles cart visibility (drawer or modal)
+            - #cartCount updates the total number of items in the cart
+            - #cartCost updates the total cost of the cart
+            - Documentation:  http://shopify.com/timber#ajax-cart
+        {% endcomment %}
+        
+        <!--
+<p class="nopad">
+          
+<a href="/cart" id="cartToggle">
+            Cart (<span id="cartCount">{{ cart.item_count }}</span> {{ cart.item_count | pluralize: 'item', 'items' }} <span id="cartCost">{{ cart.total_price | money }}</span>)
+          </a>
+
+        </p>
+-->
+        
+      </div>
+
+    </div>
+    
+</header>

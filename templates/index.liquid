@@ -1,0 +1,112 @@
+{% comment %}
+
+  This is the homepage of your site.
+
+  More info on global variables (available on all templates):
+    - http://docs.shopify.com/themes/liquid-variables/global
+    
+{% endcomment %}
+
+<!-- {% include 'icon-nav' %} -->
+
+<hr class="nobtm"/>
+
+{% include 'intro_text' %}
+
+<hr class="notop"/>
+
+<div class="timrbox">
+	{% include 'shappify-sales-clock' %}
+</div>
+
+<!-- TOP GRID -->
+
+<div class="grid"><!-- grid-uniform -->
+
+      <div class="grid-item one-half medium--one-whole small--one-whole"><!-- GRID SECTION ONE -->
+      	
+      	{% include 'gridone' %}
+
+      </div>
+      
+      <div class="grid-item one-half medium--one-whole small--one-whole"><!-- GRID SECTION TWO -->
+      	
+      	<div class="grid">
+			
+			{% include 'gridtwo' %}
+			
+			{% include 'gridthree' %}
+	
+		</div>
+
+      </div>
+
+</div>
+
+<!-- MID GRID -->
+
+<div class="grid<!-- grid-uniform -->">
+
+      <div class="grid-item one-whole"><!-- GRID SECTION THREE -->
+	  	
+	  	{% include 'gridfour' %}
+
+      </div>
+
+</div>
+
+<!-- LOWER GRID -->
+
+<div class="grid">
+	
+	<div class="grid-item one-half medium--one-whole small--one-whole mob_btm"><!-- GRID SECTION FOUR -->
+	      	
+		<div class="grid">
+					
+			{% include 'gridfive' %}
+			
+			{% include 'gridsix' %}
+			
+		</div>
+	
+	</div>
+	
+	<div class="grid-item one-half medium--one-whole small--one-whole"><!-- GRID SECTION ONE -->
+      	
+      	<div class="grid">
+			
+			{% include 'gridseven' %}
+	
+		</div>
+
+    </div>
+
+</div>
+      
+
+
+<hr/>
+
+<!-- {% include 'testimonial' %} -->
+
+<!-- BASE GRID -->
+
+<div class="grid grid-uniform">
+
+      {% include 'gridbottom' %}
+
+</div>
+
+<hr>
+
+<!-- 	{% include 'featuredin' %} -->
+
+</div>
+{% comment %}
+  Loop through three recent blog articles with the following code.
+
+  Since we're not on the blog template, we need to define the blog
+  handle we want to focus on. For this example we'll use the default 'news',
+  but you can create a blog page-specific content if you want.
+{% endcomment %}
+

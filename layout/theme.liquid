@@ -1,0 +1,280 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+  <!-- Basic page needs ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Title and description ================================================== -->
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <!-- Product meta ================================================== -->
+  {% include 'fb-open-graph-tags' %}
+  {% include 'twitter-card' %}
+
+  <!-- Helpers ================================================== -->
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <!-- FACEBOOK PIXEL ============================================= -->
+  {% include 'generalpixel' %}
+  
+  <!-- CSS ================================================== -->
+  {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+  {{ "mensch.css" | asset_url | stylesheet_tag }}
+  
+  {{ 'component.css' | asset_url | stylesheet_tag }}
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  
+  {% if settings.ajax_cart %}
+  <!-- Ajaxify Cart Plugin ================================================== -->
+  {{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  <!-- Header hook for plugins ================================================== -->
+  {{ content_for_header }}
+
+  <!--[if lt IE 9]>
+  {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
+  <![endif]-->
+
+  {% comment %}
+    If you store has customers disabled, you can remove the following JS file
+  {% endcomment %}
+  {% if template contains 'customers' %}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  {% comment %}
+    Theme dependent JS is loaded at the very bottom of this file for performance reasons
+  {% endcomment %}
+  
+  <!-- -->
+
+  {{ 'faq.js'  | shopify_asset_url | script_tag }}
+
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
+  
+  {{ 'lightbox.css' | global_asset_url | stylesheet_tag }}
+  {{ 'lightbox.js' | global_asset_url | script_tag }}
+  
+  {{ 'nivo-slider.css' | asset_url | stylesheet_tag }}
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+  {{ 'jquery.nivo.slider.pack.js' | asset_url | script_tag }}
+  
+  {% if template contains 'devCheck' %}
+  <!-- ROYAL SLIDER | DEVICE CHECKER ============================================= -->
+  
+	  <!-- basic stylesheet -->
+	  {{ 'royalslider.css' | asset_url | stylesheet_tag }}
+	  
+	  <!-- skin stylesheet (change it if you use another) --> 
+	  {{ 'rs-default.css' | asset_url | stylesheet_tag }}
+	
+	  <!-- Main slider JS script file --> 
+	  <!-- Create it with slider online build tool for better performance. -->
+	  {{ 'jquery.royalslider.min.js' | asset_url | script_tag }}
+	  
+	  {{ 'devCheck.css' | asset_url | stylesheet_tag }}
+  
+  {% endif %}
+  
+  <script type="text/javascript" charset="utf-8">
+    // $(window).load(function() {
+	$(document).ready(function() {
+                     $('#slider').nivoSlider({ pauseTime:5000, pauseOnHover:false });
+     });
+  </script>
+  
+  <![CDATA[
+ 	 jQuery.noConflict();
+ 	 //]]>
+  
+
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?2uTpNBTFSKamORxSngldTHxjrsEKxjxY";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zopim Live Chat Script-->
+
+	{% unless settings.modal_signup_first == '0' %}
+	  {{ 'mailchimp.popupsignup.scss.css' | asset_url | stylesheet_tag }}
+	  {{ 'bvalidator.css' | asset_url | stylesheet_tag }}
+	  {% include 'tricky3-popup-signup' %}
+	  {% include 'mailchimp-signup-script' %}
+	  {{ 'tricky3.core.js'  | asset_url | script_tag }}
+	  {{ 'jquery.bvalidator.js'  | asset_url | script_tag }}
+	  {{ 'mailchimp.popup.js'  | asset_url | script_tag }}
+	{% endunless %}
+  
+
+	{% include 'magiczoomplus.headers' %}
+  <script>window.mlvedaShopCurrency = "{{ shop.currency }}";
+window.supported_currencies = "{{ settings.supported_currencies }}";
+</script>
+
+	{% include 'saletimer' %}
+	
+	{% include 'hotjar' %}
+
+</head>
+
+{% comment %}
+  Add the page template as a class for easy page or template specific styling.
+{% endcomment %}
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+{% include 'google-tag' %}
+<div id="st-container" class="st-container">
+
+			{% include 'navigation' %}
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+
+{% include 'header' %}
+
+{% if template == 'index' %}
+	{% include 'home-feature' %}
+	<main class="wrapper main-content" role="main">
+
+	{% else %}
+  
+  	<main class="wrapper main-content" role="main">
+
+{% endif %}
+
+    {{ content_for_layout }}
+
+  </main>
+
+  {% include 'footer' %}
+
+			</div><!-- /st-content-inner -->
+		</div><!-- /st-content -->
+	</div><!-- /st-pusher -->
+</div><!-- /st-container -->
+
+  {% comment %}
+    Theme dependent JavaScript.
+    docs.js is only used on the documentation page and can be removed on your live site.
+  {% endcomment %}
+  {{ 'shop.js' | asset_url | script_tag }}
+  {{ 'scrollfade.js' | asset_url | script_tag }}
+  
+  {% comment %}
+    Ajaxify your cart with this plugin. Adding a product will reveal a drawer, modal, or confirmation button.
+    Enabled by default in theme settings.
+
+    Ajaxify Cart Documentation:
+      - http://shopify.com/timber#ajax-cart
+  {% endcomment %}
+  {% if settings.ajax_cart %}
+  {{ 'handlebars.min.js' | asset_url | script_tag }}
+  {% include 'ajax-cart-template' %}
+  {{ 'ajaxify.js' | asset_url | script_tag }}
+  
+  {{ 'classie.js' | asset_url | script_tag }}
+  {{ 'sidebarEffects.js'  | asset_url | script_tag }}
+    
+  <script>
+  jQuery(function($) {
+    ajaxifyShopify.init({
+      method: '{{ settings.ajax_cart_method }}', // Method options are drawer, modal, and flip. Default is drawer.
+      wrapperClass: 'wrapper', // The class that defines your site width. Default is null.
+      formSelector: '#addToCartForm', // Default is form[action="/cart/add"].
+      addToCartSelector: '#addToCart', // Default is input[type="submit"] within 'formSelector'.
+      cartCountSelector: '#cartCount', // Update number of items in the cart when a product is added. Default is null.
+      cartCostSelector: '#cartCost', // Update the total cart cost when a product is added. Default is null.
+      toggleCartButton: '#cartToggle', // To toggle drawer/modal cart, include the selector here. Default is null and will take you to /cart page.
+      useCartTemplate: true, // True to use cart.liquid markup. Default is false and uses handlebars.js for template.
+      btnClass: 'btn', // Your main button class for styling purposes if useCartTemplate is set to false. Default is null.
+      moneyFormat: {{ shop.money_format | json }} // Your shop money format, defined in liquid.
+    });
+  });
+  </script>
+  {% endif %}
+  
+  <script>
+  	jQuery(document).ready(function($) {
+	    $(".royalSlider").royalSlider({
+	        // options go here
+	        autoHeight: true,
+	        // as an example, enable keyboard arrows nav
+	        keyboardNavEnabled: true,
+	        arrowsNav: false,
+	        navigateByClick: false,
+	        sliderTouch: false, 
+	        sliderDrag:false,
+	        deeplinking: {
+			// deep linking options go here
+			enabled: true,
+			change: true,
+			prefix: 'DeviceCheck-'
+		}
+      });  
+	});
+  </script>
+	
+	
+	
+	{% include 'zopim' %}
+	
+	<script type="text/javascript">
+		$zopim(function(){
+			$zopim.livechat.setOnStatus(bubble);
+
+			function bubble(status){
+
+			if(status=='online')
+			{
+
+			//embed the API which allows the widget to be shown here, it's displayed whenever the chat status is online
+			$zopim.livechat.badge.show();
+
+			}
+			else if(status=='away')
+			{
+
+			//embed the API which hides the bubble. This part of the code runs only when the chat status is away
+			$zopim.livechat.hideAll();
+
+			}
+			else if(status=='offline')
+			{
+
+			//embed the API which hides the bubble. This part of the code runs only when the chat status is offline
+			$zopim.livechat.hideAll();
+			
+			}
+
+			}
+
+		});
+	</script>
+
+  {% include 'mlveda-currencies' %}
+
+</body>
+</html>

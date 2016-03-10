@@ -1,0 +1,94 @@
+<div class="headerbar mobl hide medium-down--show">
+	<div class="grid">
+		<div class="grid-item one-whole">
+			<div class="hb_message">
+					<h3>{{ settings.shipping_notice }}</h3>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="headerbar">
+	
+<!--
+	<div class="hb2_left">
+		<div id="st-trigger-effects">	
+			{% for link in linklists.main-menu.links %}
+		      <a data-effect="st-effect-5" href="{{ link.url }}"><i class="fa fa-bars"></i><span class="cloak">{{ link.title }}</span></a>
+			{% endfor %}
+			<a href="#">MENU</a>
+		</div>
+	</div>
+-->
+<div class="grid">
+	<div class="grid-item one-third medium--one-half small--one-quarter">	
+		<div class="hb2_left">
+			<div id="st-trigger-effects">	
+				{% for link in linklists.main-menu.links %}
+			      <a data-effect="st-effect-5" href="{{ link.url }}">
+				  	<i class="fa fa-bars"></i> <span class="cloak_sml">{{ link.title }}</span>
+				  </a>
+				{% endfor %}
+			</div>
+		</div>
+		
+		<div class="hb_left">
+			
+
+			<a href="/collections/{{ settings.header_link_first }}">{{ settings.header_text_first }}</a><span class="colorOrange"> | </span><a href="/collections/{{ settings.header_link_second }}">{{ settings.header_text_second }}</a>
+		</div>
+	</div>
+	
+	<div class="grid-item one-third medium-down--hide midl">
+	
+		<div class="hb_message">
+			<h3>{{ settings.shipping_notice }}</h3>
+		</div>
+	</div>
+	
+	<div class="grid-item one-third medium--one-half small--three-quarters midl">
+		
+		<div class="cartbox">
+			<h3 class="navi"><a href="/cart" id="cartToggle"><i class="fa fa-shopping-cart"></i><span class="cloak">CART</span></a></h3>
+		</div>
+		
+		<div class="hb2_right">
+		
+			<div id="sb-search" class="sb-search">
+				
+				<form class="search" action="/search">
+					<input class="sb-search-input" placeholder="Search..." type="search" value="{{ search.terms | escape }}" name="q" id="search">
+					<input class="sb-search-submit" type="submit" value="">
+					<span class="sb-icon-search"></span>
+				</form>
+				
+			</div>
+		
+		</div>
+		
+		<div class="hb_right">
+			{% include 'mlveda-currencies-switcher' %}
+		</div>
+		
+	</div>
+	
+</div>
+<!--
+	{% comment %}
+      If customer accounts are enabled, provide login and create account links
+        {% endcomment %}
+        {% if shop.customer_accounts_enabled %}
+        <p>
+          {% if customer %}
+            Logged in as <a href="/account">{{ customer.first_name }}</a> · {{ 'Log out' | customer_logout_link }}
+          {% else %}
+            {{ 'Log in' | customer_login_link }}
+            {% if shop.customer_accounts_optional %}
+            or {{ 'Create an account' | customer_register_link }}
+            {% endif %}
+          {% endif %}
+        </p>
+    {% endif %}
+-->
+	
+</div>
+<div style="clear: both;"></div>

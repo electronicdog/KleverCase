@@ -1,0 +1,15 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "first_name_placeholder": "John",
+        "last_name_placeholder": "Smith",
+        "address2_label": "Flat number, etc",
+        "province_label": "County",
+        "province_placeholder": "County",
+        "zip_or_postal_code_label": "TEST TEST",
+        "optional_first_name_placeholder": "John"
+      }
+    }
+  }
+}

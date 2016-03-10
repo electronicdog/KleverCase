@@ -1,0 +1,8 @@
+<nav class="st-menu st-effect-5" id="menu-5">
+	<h2>Navigation</h2>
+	<ul>
+	{% for link in linklists.menu.links %}
+		<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+	{% endfor %}
+	</ul>
+</nav>

@@ -1,0 +1,152 @@
+{% layout 'fullwrap' %}
+{% comment %}
+
+  For more information on collection tags:
+    - http://docs.shopify.com/themes/liquid-variables/collection
+
+{% endcomment %}
+
+<!-- {% paginate collection.products by 12 %} -->
+
+{% if collection.image %}
+<div class="collection-header" style="background-image: url({{ collection.image | img_url: 'master' }});">
+{% endif %}
+  <div class="wrapper">
+	  <!-- <div class="collection1">&nbsp;</div> -->
+	  <h2>{{ collection.title }}</h2>
+	  <div class="rte cat_layout">
+	  	<h4>{{ collection.description }}</h4>
+	  </div>
+  </div>
+</div>
+
+
+<!-- {% include 'breadcrumb' %} -->
+
+<div class="wrapper pad_top">
+
+{% comment %}
+  Use .grid--rev so that the collection tags appear below the products on mobile
+{% endcomment %}
+<div class="grid--rev">
+
+  <div class="grid-item large--two-thirds">
+
+    <!--
+<p class="right">
+      <a href="?view=list" title="List view">List view</a>
+    </p>
+-->
+
+    {% comment %}
+      Use class grid-uniform to have evenly sized columns clear
+      each other properly at each breakpoint.
+    {% endcomment %}
+    <div class="grid-uniform">
+
+      {% comment %}
+        Loop through our products in the current collection.
+        See the snippet 'product-grid-item' for the layout.
+      {% endcomment %}
+      {% paginate collection.products by 100 %}
+      {% for product in collection.products %}
+
+        {% include 'product-grid-item' %}
+
+      {% else %}
+
+        <div class="grid-item">
+          <p>There are no products in this collection.</p>
+        </div>
+
+      {% endfor %}
+	  {% endpaginate %}
+    </div>
+
+    <!--
+{% if paginate.pages > 1 %}
+      <hr>
+
+      <div class="text-center">
+        {% include 'pagination-custom' %}
+      </div>
+    {% endif %}
+-->
+
+  </div>
+
+  <div class="grid-item large--one-third">
+	
+	<ul class="subnav">
+		{% for collection in collections %}
+			<li {% if link.title == page_title %}class="colActive"{% endif %}>{{ collection.title | link_to: collection.url }}</li>
+  		{% endfor %}
+	</ul>
+	
+	<div class="sort_box">
+<label for="sort-by">Sort by</label>
+<select id="sort-by">
+<option value="manual">Featured</option>
+<option value="price-ascending">Price: Low to High</option>
+<option value="price-descending">Price: High to Low</option>
+<option value="title-ascending">A-Z</option>
+<option value="title-descending">Z-A</option>
+<option value="created-ascending">Oldest to Newest</option>
+<option value="created-descending">Newest to Oldest</option>
+<option value="best-selling">Best Selling</option>
+</select>
+</div>
+<script>
+Shopify.queryParams = {};
+if (location.search.length) {
+for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+aKeyValue = aCouples[i].split('=');
+if (aKeyValue.length > 1) {
+Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+}
+}
+}
+jQuery('#sort-by')
+.val('{{ collection.sort_by | default: collection.default_sort_by }}')
+.bind('change', function() {
+Shopify.queryParams.sort_by = jQuery(this).val();
+location.search = jQuery.param(Shopify.queryParams);
+});
+</script>
+
+<!--
+<ul class="subnav clearfix">
+  <li{% unless current_tags %} class="active"{% endunless %}>
+    {% if collection.handle %}
+    <a href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}">All</a>
+    {% elsif collection.current_type %}
+    <a href="{{ collection.current_type | url_for_type | sort_by: collection.sort_by }}">All</a>
+    {% elsif collection.current_vendor %}
+    <a href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}">All</a>
+    {% endif %}
+  </li>
+  {% for tag in collection.all_tags %}
+  {% if current_tags contains tag %}
+  <li class="active">
+    {{ tag | link_to_remove_tag: tag }}
+  </li>
+  {% else %}
+  <li>
+    {{ tag | link_to_tag: tag }}
+  </li>
+  {% endif %}
+  {% endfor %}  
+</ul>
+-->
+<style>
+</style>
+
+	
+    
+
+  </div>
+
+</div>
+
+</div>
+{% endpaginate %}
