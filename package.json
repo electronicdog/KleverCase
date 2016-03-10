@@ -1,0 +1,22 @@
+{
+  "name": "klevercase",
+  "version": "1.0.0",
+  "description": "This is the official codebase for all work relating to the Klevercase website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electronicdog/Klevercase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electronicdog/Klevercase/issues"
+  },
+  "homepage": "https://github.com/electronicdog/Klevercase#readme",
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.0"
+  }
+}
